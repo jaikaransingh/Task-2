@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous">
+    <title>Image Gallery</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+
+        <h1 id="heading">Gaming World!</h1>
+
+        <div class="image_container">
+
+            <div class="image">
+                <img src="1.jpg" alt="">
+                <div class="img-name">
+                    <ul class="icons">
+                        <li><i class="fa fa-thumbs-up" "=""></i></li>
+                        <li><i class=" fa fa-thumbs-down"></i></li>
+                    </ul>
+                    <div class="caption">
+                        <figcaption>
+                            <h2>PUBG</h2>
+                        </figcaption>
+                        <p>PUBG Mobile is a free-to-play battle royale video game developed by LightSpeed & Quantum
+                            Studio, a division of Tencent Games.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="2.jpg" alt="">
+                <div class="img-name">
+                    <ul class="icons">
+                        <li><i class="fa fa-thumbs-up" "=""></i></li>
+                    <li><i class=" fa fa-thumbs-down"></i></li>
+                    </ul>
+                    <div class="caption">
+                        <figcaption>
+                            <h2>Valorant</h2>
+                        </figcaption>
+                        <p>VALORANT is a free-to-play first-person tactical shooter video game being developed and
+                            published by Riot Games.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="3.jpg" alt="">
+                <div class="img-name">
+                    <ul class="icons">
+                        <li><i class="fa fa-thumbs-up" "=""></i></li>
+                    <li><i class=" fa fa-thumbs-down"></i></li>
+                    </ul>
+                    <div class="caption">
+                        <figcaption>
+                            <h2>Fortnite</h2>
+                        </figcaption>
+                        <p>Fortnite is a third person shooter survival game where the player has to survive against up
+                            to 99 other players.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="4.jpg" alt="">
+                <div class="img-name">
+                    <ul class="icons">
+                        <li><i class="fa fa-thumbs-up" "=""></i></li>
+                    <li><i class=" fa fa-thumbs-down"></i></li>
+                    </ul>
+                    <div class="caption">
+                        <figcaption>
+                            <h2>Call Of Duty</h2>
+                        </figcaption>
+                        <p>Call of Duty is a first-person shooter video game franchise published by Activision. Starting
+                            out in 2003, it first focused on games set in World War II.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="5.jpg" alt="">
+                <div class="img-name">
+                    <ul class="icons">
+                        <li><i class="fa fa-thumbs-up" "=""></i></li>
+                    <li><i class=" fa fa-thumbs-down"></i></li>
+                    </ul>
+                    <div class="caption">
+                        <figcaption>
+                            <h2>Need For Speed</h2>
+                        </figcaption>
+                        <p>Need for Speed is a multiplatform racing video game series with the first game The Need for
+                            Speed being released on August 31, 1994.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="6.jpg" alt="">
+                <div class="img-name">
+                    <ul class="icons">
+                        <li><i class="fa fa-thumbs-up" "=""></i></li>
+                    <li><i class=" fa fa-thumbs-down"></i></li>
+                    </ul>
+                    <div class="caption">
+                        <figcaption>
+                            <h2>Minecraft</h2>
+                        </figcaption>
+                        <p>Minecraft is a video game in which players create and break apart various kinds of blocks in
+                            three-dimensional worlds.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-image">
+                <span>×</span>
+                <img src="NubraValley-1.jpg" alt="">
+            </div>
+            <footer name="contact">
+                <h2 id="contact">Contact</h2>
+                <ul class="icons">
+                    <li><i class="fas fa-mobile-alt"></i></li>
+                    <li><i class="fab fa-github"></i></li>
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                </ul>
+            </footer>
+        </div>
+
+        <script>
+            document.querySelectorAll('.image_container img').forEach(image => {
+                image.onclick = () => {
+                    document.querySelector('.popup-image').style.display = 'block';
+                    document.querySelector('.popup-image img').src = image.getAttribute('src');
+                }
+            });
+            document.querySelector('.popup-image span').onclick = () => {
+                document.querySelector('.popup-image').style.display = 'none';
+            }
+
+        </script>
+</body>
+
+</html>
